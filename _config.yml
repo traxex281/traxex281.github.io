@@ -6,4 +6,3 @@
 ├── manual-testing.html       → Page 3: Manual Testing
 ├── css/
 │   └── style.css           → Stylesheet (shared across pages)
-└── images/                 → Folder for project visuals (optional)
