@@ -1,34 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Aptos:wght@400;600&display=swap');
-
 body {
-  font-family: 'Segoe UI', 'Inter', 'Helvetica Neue', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  background-color: #f4f6f8;
-  color: #333;
+  background-color: #808080;
+  color: #2D2D2D;
 }
 
-/* Navbar */
-header {
-  background-color: #333;
-  padding: 15px 0;
-}
-
-.navbar {
+.nav-links {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #1E1E2F;
   position: fixed;
   top: 0;
   width: 100%;
 }
 
-.navbar {
+.nav-links li {
   float: left;
 }
 
-.navbar a {
+.nav-links a {
   display: block;
   color: white;
   text-align: center;
@@ -36,11 +28,139 @@ header {
   text-decoration: none;
 }
 
-.navbar a:hover {
-  background-color: #184403;
+.nav-links a:hover {
+  background-color: #4E9FD1;
 }
 
-.navbar a.active {
-  background-color: #0088cc;
+.active {
+  background-color: #4E9FD1;
 }
 
+.profilepic-img {
+  width: 20%;
+  height: 40%;
+  border-radius: 50%;
+  
+}
+
+.profilepic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  border: 1px;
+}
+
+section {
+  text-align: center;
+}
+
+.introduction {
+  font-family: 'Dancing Script', cursive;
+  color: #F5F5F5;
+  text-align: center;
+  font-size: 1.7em;
+}
+
+.homepage-container {
+  display: flex;
+  flex-direction: column;  
+  gap: 20px;
+}
+
+.homepage-container > div > a {
+  background-color: #1E1E2F;
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  color: #F5F5F5;
+  text-decoration: none;
+  display: block;
+  font-size: 1.7em;
+}
+
+section {
+  background-color: #DCDCDC;
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+  margin-top: 20px;
+  margin-left: 10px;
+  border-style: outset;
+  border-color: black;
+}
+
+.personal-info {
+  width: 40%;
+  max-height: 200px;
+  float: left;
+  margin-bottom: 0.1px;
+  margin-top: 60px; 
+}
+
+.overview {
+  width: 40%;
+  max-height: 1000px;
+  float: left;
+  margin-bottom: 0.1px;
+  margin-top: 0.5px; 
+  text-align: left;
+}
+
+.skills {
+  width: 40%;
+  max-height: 1000px;
+  float: left;
+  margin-bottom: 0.1px;
+  margin-top: 0.5px; 
+  text-align: left;
+}
+
+.education-info {
+  width: 54.767%;
+  float: right;
+  margin-right: 10px;
+  height: 186px;
+  margin-top: 60px;
+}
+
+.experience-preview {
+  width: 54.767%;
+  float: right;
+  margin-right: 10px;
+  margin-top: 0.5px;
+  margin-bottom: 50px; 
+}
+
+.pp {
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+  float: left;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 2%;
+}
+
+.projects-preview {
+  grid-column: 2 / span 4;
+}
+
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+footer {
+  color: #F5F5F5;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+  position: fixed;
+  background-color: #1E1E2F;
+}
