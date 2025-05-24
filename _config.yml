@@ -1,8 +1,5 @@
-/ (root)
-│
-├── index.html              → Homepage (brief intro + project links)
-├── automation-anywhere.html  → Page 1: Automation Anywhere Bot
-├── selenium-testing.html     → Page 2: Selenium Automated Testing
-├── manual-testing.html       → Page 3: Manual Testing
-├── css/
-│   └── style.css           → Stylesheet (shared across pages)
+title: "Hermoine Catherine Canania Portfolio"
+description: "A simple personal portfolio site showcasing test automation projects"
+baseurl: ""
+url: "https://traxex281.github.io"
+theme: minima
