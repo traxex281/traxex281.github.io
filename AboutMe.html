@@ -4,40 +4,129 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hermaine Catherine Canania | QA & RPA Engineer</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/modal.css" />
+  <link rel="stylesheet" href="css/webstyles.css" />
 </head>
-<body>
-  <header>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About Me</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="certifications.html">Certifications</a></li>
-        <li><a href="resume.html">Resume</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main class="homepage">
+<body>
+      <div class="navlinks-container" id="headernav">
+        <a href="index.html">Home</a>
+        <a href="AboutMe.html" class="active">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="resume.html">Resume</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </a>
+      </div>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("headernav");
+      if (x.className === "navlinks-container") {
+        x.className += " responsive";
+      } else {
+        x.className = "navlinks-container";
+      }
+    }
+    </script>
+
+  <main class="aboutmepage">
     <section class="personal-info">
-      <img src = "Image.jpg" alt="Profile Picture" width="300" height="300" class="pp">
-      <h1 style="text-align:left; font-family: 'Dancing Script', cursive; font-size: 25px; margin-top: 6%;">Hermaine Catherine Canania</h1>
-      <p style="text-align:left; margin-top: 1%;"> &#9792; &nbsp; &nbsp;&nbsp;April 28, 1996 <br> &#9742; &nbsp;&nbsp;&nbsp;09996764713<br>&#127960;&nbsp;&nbsp;&nbsp;&nbsp;Baclayan, Boljoon, Cebu<br>&#128386;&nbsp;&nbsp;&nbsp;traxex281@gmail.com</p>
+      <h1 style="font-size: 40px;">HERMAINE CATHERINE CANANIA</h1>
+      <p style="margin: 30px;"> &#9792; &nbsp; &nbsp;&nbsp;April 28, 1996 <br> &#9742; &nbsp;&nbsp;&nbsp;09996764713<br>&#127960;&nbsp;&nbsp;&nbsp;&nbsp;Baclayan, Boljoon, Cebu<br>&#128386;&nbsp;&nbsp;&nbsp; traxex281@gmail.com<br>&#128386;&nbsp;&nbsp;&nbsp; www.linkedin.com/in/hermaine-catherine-canania-6b2549143</p>
+      <p style="margin: 30px;">
+        Hello! I’m a 29-year-old <strong>Senior Software Engineer with over 5 years of professional experience</strong>, specializing in <strong>test automation, RPA, and software quality assurance</strong>.
+        Over the years, I’ve developed a strong technical foundation and a passion for building reliable systems that enhance efficiency and performance.
+        My technical toolkit includes <strong>Selenium for web automation, Automation Anywhere bots to automate repetitive, rule-based digital tasks, and Azure DevOps for CI/CD pipeline integration, comprehensive test cases and plans and logging of defects</strong>.
+        I’m proficient in programming with <strong>Java</strong> and <strong>JavaScript</strong>, and I enjoy designing scripts and frameworks that solve real-world challenges.
+      </p>    
+      <p style="margin: 30px;">
+        One of my key experiences has been working with <strong>ServiceNow applications</strong>, where I performed functional and end-to-end testing, created reusable test cases, and collaborated closely with cross-functional teams to ensure seamless performance across modules.
+        I’ve also handled ServiceNow data monitoring and integration testing including automations that compare UI and backend data using sys_ids, helping to identify inconsistencies and speed up resolution processes.
+      </p>    
+      <p style="margin: 30px;">
+        I'm someone who enjoys solving complex problems, refining software processes, and ensuring that every product I work on meets high-quality standards.
+        I take pride in being analytical, detail-oriented, and adaptable in fast-paced environments, and I’m always eager to learn new tools and methods that improve workflow and testing accuracy.
+      </p>    
+      <p style="margin: 30px;">
+        Beyond work, I have a vibrant mix of hobbies that keep me creative, relaxed, and balanced.
+        I’m a huge fan of K-pop, K-dramas, Disney movies, Barbie films, and Hollywood blockbusters.
+        Whether I’m binge-watching an emotional K-drama or reliving the magic of Disney classics, these interests help me recharge and stay inspired.
+        I also love playing video games. They’re not only entertaining but also stimulate my critical thinking and focus.
+      </p>    
+      <p style="margin: 30px;">
+        I’m also an animal lover through and through. I currently live with 20 dogs and 4 cats, and each of them brings joy and chaos into my life in the best way possible.
+        Taking care of them has taught me patience, responsibility, and the importance of emotional connection.
+        They keep my heart full and my life grounded, especially after long hours of coding and debugging.
+      </p>   
+      <p style="margin: 30px;">
+        I believe in working hard while staying true to the things that bring joy and meaning.
+        My love for technology, pop culture, and animals fuels both my personal growth and professional journey.
+        Whether I’m automating workflows, tackling bugs, bonding with my pets, or dancing to my favorite K-pop playlist, I bring dedication, enthusiasm, and a touch of fun to everything I do.
+      </p>
+    </section>
+
+    <section class="hobbies">
+      <div class="main-grid">
+        <div class="image-group">
+          <div class="image-item">
+            <img src="Picture1.png" alt="Image 1" />
+            <div class="caption"><b>I love listening to music.</b><br>
+              <span class="hobby-samples">&dash; KPOP<br>
+                &dash; Pop<br>
+                &dash; Hip-Hop<br></span>
+            </div>
+          </div>
+          <div class="image-item">
+            <img src="Picture2.png" alt="Image 2" />
+            <div class="caption"><b>I love watching movies and dramas.</b><br>
+                <span class="hobby-samples">&dash; KDrama<br>
+                  &dash; Avenger<br>
+                  &dash; Horror<br>
+                  &dash; Barbie/Disney<br></span>
+            </div>
+          </div>
+          <div class="image-item">
+            <img src="Picture5.png" alt="Image 3" />
+            <div class="caption"><b>I love playing mobile games</b><br>
+              <span class="hobby-samples">&dash; Mobile Legends<br>
+                &dash; Genshin Impact<br>
+                &dash; PUBG<br>
+                &dash; COD<br></span>
+          </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="education-info">
-      <h2 style="text-align:left; font-family: 'Dancing Script', cursive; font-size: 25px; margin-top: 4%; margin-left: 30px;">Education</h2>
-      <div class="experience-info" style="text-align:left; margin-left: 30px; margin-right: 30px;">
-          <p><b>Bachelor of Science in Information and Communication Technology </b><br>Cebu Technological University, Argao Campus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2015 – 2019</p>
+      <h2>Education</h2>
+      <div class="experience-info">
+          <p><b>Bachelor of Science in Information and Communication Technology </b><br>Cebu Technological University, Argao Campus<br>2015 – 2019</p>
         </div>
+    </section>   
+
+    <section class="overview">
+      <h3>Key Skills</h3>
+      <div>
+        <p><b>Testing Types:</b> Regression, Smoke, Performance, Integration, API, Product, End-to-End Testing<br>
+          <b>Manual Testing:</b> Test plans, test cases, execution, defect logging<br>
+          <b>Automation:</b> Selenium, Automation Anywhere 360<br>
+          <b>Tools:</b> Azure DevOps, Postman, Microsoft 365<br>
+          <b>Programming:</b> Java, JavaScript<br>
+          <b>Database:</b> SQL (JOINs, validations)<br>
+          <b>API Testing:</b> REST API with Selenium & Postman<br>
+          <b>Methodology:</b> Agile
+          </p>
+      </div>
     </section>
 
     <section class="experience-preview">
-      <h2 style="text-align:left; font-family: 'Dancing Script', cursive; font-size: 25px; margin-top: 4%; margin-left: 30px;">Work Experience</h2>
-      <div class="experience-info" style="text-align:left; margin-left: 30px; margin-right: 30px;">
-          <p><b>Test Automation Senior Analyst</b> | Accenture Inc.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2020- Present</p>
+      <h4>Work Experience</h4>
+      <div class="experience-info">
+          <p><b>Test Automation Senior Analyst</b> | Accenture Inc.<br>2020- Present</p>
           <p>&bullet; Developed Automation Anywhere bot to automate data integration monitoring, reducing manual effort by
             95%. The bot extracts data from ServiceNow UI and database, compares them using SQL queries, and
             generates an Excel report listing missing records. Implemented web automation, database automation, and
@@ -68,48 +157,15 @@
             to UI. Verified that data flows correctly by checking database entries and that payloads were successfully
             sent to EY systems. This improved end-to-end testing efficiency and ensured accurate data communication
             between systems. </p>
-            <p><br><b>Application Development Associate</b> | Accenture Inc.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2019- 2020</p>
+            <p><br><b>Application Development Associate</b> | Accenture Inc.<br>2019 - 2020</p>
             <p>&bullet; Built foundational skills in PHP, Node.js, Angular, Java, and front-end development by working on various
-              projects.
-          </p>
+              projects.</p>
         </div>
-    </section>
-
-    <section class="overview">
-      <h3 style="text-align:left; font-family: 'Dancing Script', cursive; font-size: 25px; margin-left: 30px;">Overview</h3>
-      <div style="margin-left: 30px; margin-right: 30px;">
-        <p>As a Senior Test Automation Engineer with over 5 years of experience, I specialize in both manual and automated testing, delivering high-quality software solutions that meet client expectations. I have worked with a variety of tools such as Selenium Java, Automation Anywhere, and Azure DevOps, helping businesses reduce testing time, improve efficiency, and ensure reliable software quality.</p>
-        <p><b>What I Can Do for You:</b><br>&bullet; Enhance testing processes using Selenium Java, saving your team time and ensuring higher accuracy and consistency.<br>&bullet; Develop comprehensive test cases and plans, customized to your project needs, ensuring all aspects of your software are rigorously tested and defects are minimized.<br>&bullet; Leverage Robotic Process Automation (RPA) to automate repetitive tasks, improving productivity, and reducing errors in the testing process.<br>&bullet; Streamline integration using Azure DevOps, ensuring smooth CI/CD pipelines and continuous software delivery.</p>
-      </div>
-    </section>
-
-    <section class="skills">
-      <h3 style="text-align:left; font-family: 'Dancing Script', cursive; font-size: 25px; margin-left: 30px;">Key Skills</h3>
-      <div style="margin-left: 30px; margin-right: 30px;">
-        <p><b>Testing Types:</b> Regression, Smoke, Performance, API, Product Testing<br>
-          <b>Manual Testing:</b> Test plans, test cases, execution, defect logging<br>
-          <b>Automation:</b> Selenium, Automation Anywhere 360<br>
-          <b>Tools:</b> Azure DevOps, Postman<br>
-          <b>Programming:</b> Java, JavaScript<br>
-          <b>Database:</b> SQL (JOINs, validations)<br>
-          <b>API Testing:</b> REST API with Selenium & Postman<br>
-          <b>Methodology:</b> Agile
-          </p>
-      </div>
-    </section>
+    </section>   
   </main>
 
   <footer>
     <p>&copy; 2025 Hermaine Catherine Canania. All rights reserved.</p>
   </footer>
-
-  <script>
-    function openModal(id) {
-      document.getElementById(id).style.display = "block";
-    }
-    function closeModal(id) {
-      document.getElementById(id).style.display = "none";
-    }
-  </script>
 </body>
 </html>
