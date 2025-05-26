@@ -3,38 +3,96 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hermoine's QA & RPA Portfolio</title>
+  <title>Data Integration Monitoring Automation</title>
   <link rel="stylesheet" href="css/webstyles.css" />
 
 </head>
 <body>
+  
+  <div class="navlinks-container" id="headernav">
+    <a href="index.html">Home</a>
+    <a href="AboutMe.html" >About Me</a>
+    <div class="dropdown">
+      <button class="dropbtn" style="background-color: #04AA6D;">Projects 
+      </button>
+      <div class="dropdown-content">
+        <a href="automation-anywhere.html">Data Integration Monitoring Automation</a>
+        <a href="selenium-testing.html">Enhanced Automation Framework for API and Regression Testing</a>
+        <a href="manual-testing.html">Manual Testing and Test Planning</a>
+      </div>
+    </div> 
+    <a href="certifications.html">Certifications</a>
+    <a href="resume.html">Resume</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </a>
+  </div>
 
-  <main class="project-page" id="projectContent">
-    <section class="project-detail">
-      <h1>Automation Anywhere Bot</h1>
-      <p>This bot automates data patrol monitoring by extracting sysids from the ServiceNow UI and database, comparing records, and generating a report in Excel with missing entries. The bot also sends the report via email. This solution streamlines manual auditing and ensures timely reporting for integration gaps.</p>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("headernav");
+      if (x.className === "navlinks-container") {
+        x.className += " responsive";
+      } else {
+        x.className = "navlinks-container";
+      }
+    }
+    </script>
 
-      <h2>Tech Stack</h2>
+  <main class="project-page">
+    <div class="project-detail">
+      <h1 style="font-size: 20px;">DATA INTEGRATION MONITORING AUTOMATION</h1>
+      <p><b>Role:</b> Developer & Tester<br><b>Tools Used:</b> Automation Anywhere, Java, SQL, ServiceNow</p>
+    
       <ul>
-        <li>Automation Anywhere A360</li>
-        <li>Excel automation package</li>
-        <li>Email automation</li>
-        <li>Database queries (ODBC)</li>
-        <li>ServiceNow UI scraping</li>
+        <li><b> Overview:</b> Developed an Automation Anywhere solution for data integration monitoring, streamlining
+          the process of validating and synchronizing records between ServiceNow UI and database. This
+          automation significantly reduced manual effort and improved data accuracy.</li>
+        <li> <b>Key Responsibilities & Achievements</b>
+            <ul>
+              <li> Extracted sysids from ServiceNow UI and database, ensuring accurate data comparison.</li>
+              <li> Automated the identification of missing or mismatched records, reducing data inconsistencies.</li>
+              <li> Generated and emailed detailed Excel reports, providing clear visibility into discrepancies.</li>
+              <li> Integrated with Automation Anywhere, optimizing process efficiency and execution speed.</li>
+              <li> Reduced manual validation time, accelerating decision-making and reporting.</li>
+            </ul>
+        </li>
+        <li> <b>Tools & Technologies Used</b>
+          <ul>
+            <li> Automation Anywhere for end-to-end process automation.</li>
+            <li> ServiceNow for sysid extraction and validation.</li>
+            <li> Excel automation for structured reporting.</li>
+            <li> Database queries for accurate data retrieval and comparison.</li>
+          </ul>
+        </li>
+        <li> <b>Project Outcome</b>
+          <ul>
+            <li> Successfully delivered an automated data integration monitoring solution, eliminating human errors, reducing manual effort, and improving overall data integrity.</li>
+            <li> ServiceNow for sysid extraction and validation.</li>
+            <li> Excel automation for structured reporting.</li>
+            <li> <b> Result:</b>Reduced manual monitoring by 95%, improving data accuracy.</li>
+          </ul>
+        </li>
       </ul>
 
-      <h2>Highlights</h2>
+      <p><b>Highlights</b></p>
       <ul>
         <li>Fully unattended execution on scheduled basis</li>
         <li>Excel summary with color-coded missing sysids</li>
         <li>Error handling and logging for debugging</li>
         <li>Reduces manual validation time from 4 hours to 10 minutes</li>
       </ul>
-    </section>
+    </div>
+
+    <div class="iframe-container">
+      <iframe src="RPAscreenshot.html" title="Example iFrame"></iframe>
+    </div>
   </main>
 
   <footer>
-    <p>© 2025 Hermoine Catherine Canania · All rights reserved</p>
+    <p>© 2025 Hermaine Catherine Canania · All rights reserved</p>
   </footer>
 
 </body>

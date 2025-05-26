@@ -61,7 +61,7 @@ a {
 
 .links-container a:hover {
     opacity: 1;
-    background-color: #04AA6D;
+    background-color: #706a6a;
 }
 
 .profession {
@@ -73,9 +73,6 @@ a {
 .navlinks-container {
     overflow: hidden;
     background-color: #1E1E2F;
-    position: fixed;
-    z-index: 1000;
-    width: 100%;
 }
 
 .navlinks-container a {
@@ -88,7 +85,10 @@ a {
     font-size: 17px;
 }
 
-.navlinks-container a:hover,
+.navlinks-container a:hover {
+    background-color: #706a6a;
+    color: white;
+}
 .navlinks-container a.active {
     background-color: #04AA6D;
     color: white;
@@ -117,7 +117,7 @@ a {
     gap: 10px;
     padding: 10px;
     margin: 10px;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 section {
@@ -215,65 +215,100 @@ footer {
 
 
 /* CSS style: projects.html */
-.projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin: 10px;
-    margin-top: 60px;
-}
-  
-.project-menu {
-    flex: 1 1 200px;
-    display: flex;
-    flex-direction: column;
-}
-  
-.project-menu button {
-    padding: 10px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    background-color: #f0f0f0;
-    border: none;
-    text-align: left;
-    width: 100%;
-    padding: 10px;
-    height: 100px;
-    box-sizing: border-box;
-}
-  
-.project-menu button:hover {
-    background-color: #ddd;
+.dropdown {
+  float: left;
+  overflow: hidden;
 }
 
-.project-display {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding-top: 100%;
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  background-color: #1E1E2F;
+  color: white;
+  padding: 14px 16px;
+  font-family: inherit;
+  margin: 0;
 }
-.projectFrame {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    background-color: #1E1E2F;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #706a6a;
+    color: white;
+}
+
+.dropdown-content a:hover {
+    background-color: #706a6a;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* CSS style: automation-anywhere.html */
+.project-page {
+    display: flex;
+    height: 100vh;
+    margin: 10px;
+  }
+  .project-detail {
+    width: 50%;
+    padding: 20px;
+    background-color: #04AA6D;
+    color: white;
+    overflow-y: auto;
+  }
+  .iframe-container {
+    width: 60%;
+    height: 100%;
+    border-left: 1px solid #232526;
+    background: #232526; 
+    background: -webkit-linear-gradient(to right, #414345, #232526); 
+    background: linear-gradient(to right, #414345, #232526);
+  }
+  iframe {
     width: 100%;
     height: 100%;
     border: none;
-}
-  
-.project-content {
-    display: none;
-}
-  
-.project-content.active {
-    display: block;
-}
+  }
 
-.project-page {
-    color: whitesmoke;
-}
+  /* CSS style for selenium-testing.html */
+  .codes {
+    background: #232526; 
+    background: -webkit-linear-gradient(to right, #414345, #232526); 
+    background: linear-gradient(to right, #414345, #232526);
+    color: #eee60cbf;
+    padding: 0;
+    font-family: monospace;
+    }
+  pre {
+    white-space: pre; /* Prevent auto wrapping */
+    overflow-x: auto; /* Enable horizontal scroll */
+    max-width: 100%;
+  }
+
+  code {
+    display: block;
+  }
 
 
 /* Tablet & desktop adjustments */
@@ -302,37 +337,39 @@ footer {
 }
 
 /* Mobile layout adjustments */
-@media screen and (max-width: 600px) {
-    .navlinks-container a:not(:first-child) {
+@media screen and (max-width: 600px) { 
+    .navlinks-container a:not(:first-child), .dropdown .dropbtn {
         display: none;
-    }
-
-    .navlinks-container a.icon {
+      }
+      .navlinks-container a.icon {
         float: right;
         display: block;
-    }
+      }
 
-    .navlinks-container.responsive {
-        position: relative;
-    }
-
+    .navlinks-container.responsive {position: relative;}
     .navlinks-container.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
     }
-
     .navlinks-container.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .navlinks-container.responsive .dropdown {float: none;}
+    .navlinks-container.responsive .dropdown-content {position: relative;}
+    .navlinks-container.responsive .dropdown .dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
     }
 
     .aboutmepage {
         grid-template-columns: 1fr;
         padding: 10px;
         margin: 0;
-        margin-top: 40px;
+        margin-top: 5px;
     }
 
     footer {
@@ -361,10 +398,11 @@ footer {
     .overview,
     .experience-preview {
         grid-column: 1 / -1;
-  }
 
-    .projects-container {
-        flex-direction: column;
+    }
+
+    .project-page {
+        padding: 10px;
     }
 }
 
@@ -388,3 +426,37 @@ footer {
         grid-column: 1 / -1;
     }
 }
+
+@media (max-width: 768px) {
+    .project-page {
+      flex-direction: column;
+    }
+
+    .project-detail,
+    .iframe-container {
+      width: 100%;
+      height: auto; 
+    }
+
+    .iframe-container {
+      border-left: none;
+      border-top: 1px solid #ccc;
+    }
+
+    iframe {
+        min-height: 400px; /* or any appropriate height for mobile */
+        width: 100%;
+  }
+  }
+
+@media (max-width: 480px) {
+    .project-detail, .iframe-container {
+      height: auto;
+    }
+
+    .project-detail {
+      flex-direction: column;
+      padding: 10px;
+    }
+  }
+

@@ -1,23 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Selenium Automated Testing</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enhanced Automation Framework for API and Regression Testing</title>
+  <link rel="stylesheet" href="css/webstyles.css" />
+
 </head>
 <body>
-  <a href="index.html">← Back to Home</a>
-  <h1>Selenium Automated Testing</h1>
-  <p><strong>Tools:</strong> Selenium, Java, TestNG, Maven</p>
-  <p><strong>Project Type:</strong> Automated Regression & UI Testing</p>
+  
+  <div class="navlinks-container" id="headernav">
+    <a href="index.html">Home</a>
+    <a href="AboutMe.html" >About Me</a>
+    <div class="dropdown">
+      <button class="dropbtn" style="background-color: #04AA6D;">Projects 
+      </button>
+      <div class="dropdown-content">
+        <a href="automation-anywhere.html">Data Integration Monitoring Automation</a>
+        <a href="selenium-testing.html">Enhanced Automation Framework for API and Regression Testing</a>
+        <a href="manual-testing.html">Manual Testing and Test Planning</a>
+      </div>
+    </div> 
+    <a href="certifications.html">Certifications</a>
+    <a href="resume.html">Resume</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </a>
+  </div>
 
-  <p>Automated login flows, UI checks, and regression tests to catch issues early and reduce repetitive manual testing effort.</p>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("headernav");
+      if (x.className === "navlinks-container") {
+        x.className += " responsive";
+      } else {
+        x.className = "navlinks-container";
+      }
+    }
+    </script>
 
-  <ul>
-    <li>Reduced 15+ hours of regression work per release</li>
-    <li>Early detection of bugs before production releases</li>
-    <li>Tests break if a new feature is introduced unannounced—acts as an alert system</li>
-  </ul>
+  <main class="project-page">
+    <div class="project-detail">
+      <h1 style="font-size: 20px;">ENHANCED AUTOMATION FRAMEWORK FOR API AND REGRESSION TESTING</h1>
+      <p><b>Role:</b> Developer & Tester<br><b>Tools Used:</b> Selenium, Java, JavaScript, Postman, RESTAPI, ServiceNow</p>
+      
+      <p>This repository showcases my test automation projects for ServiceNow applications, including scripts I developed and remediated to ensure stability and efficiency. I inherited the framework and focused on building test cases for new features and monthly maintenance. Integrated into CI/CD pipelines to automate the whole testing process.</p>
+      <ul>
+        <li> 100% reduction in manual effort through automation.</li>
+        <li> Improved test accuracy and execution time with optimized scripts.</li>
+        <li> Automated validations for ServiceNow UI and API testing.</li>
 
-  <p>I inherited the framework and focused on building test cases for new features and monthly maintenance. Integrated into CI/CD pipelines to automate the whole testing process.</p>
+      <p><b>Key Achievements</b></p>
+        <li> Test script remediation for ServiceNow UI and API to ensure stability.</li>
+        <li> Optimized automation execution in Azure DevOps pipelines.</li>
+        <li> Eliminated manual test execution, achieving 100% automation coverage.</li>
+      </ul>
+    </div>
+
+    <div class="iframe-container">
+      <iframe src="sampleseleniumcodes.html" title="Example iFrame"></iframe>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Hermaine Catherine Canania · All rights reserved</p>
+  </footer>
+
 </body>
 </html>
