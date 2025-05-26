@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu PDF Viewer</title>
+  <link rel="stylesheet" href="css/webstyles.css" />
+ 
+</head>
+<body>
+
+<div class="navlinks-container" id="headernav">
+    <a href="index.html">Home</a>
+    <a href="AboutMe.html" >About Me</a>
+    <div class="dropdown">
+      <button class="dropbtn">Projects 
+      </button>
+      <div class="dropdown-content">
+        <a href="automation-anywhere.html">Data Integration Monitoring Automation</a>
+        <a href="selenium-testing.html">Enhanced Automation Framework for API and Regression Testing</a>
+        <a href="manual-testing.html">Manual Testing for SaaS Applications</a>
+      </div>
+    </div> 
+    <a href="shorts.html">Youtube Shorts</a>
+    <a href="certifications.html" class="active">Certifications</a>
+    <a href="resume.html">Resume</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </a>
+  </div>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("headernav");
+      if (x.className === "navlinks-container") {
+        x.className += " responsive";
+      } else {
+        x.className = "navlinks-container";
+      }
+    }
+    </script>
+
+<main class="certificationspage">
+    <div class="sidebar">
+    <button class="menu-btn active" data-title="Menu 1 Details" data-pdf="Certifications/Micro-Certification-Welcome to ServiceNow.pdf">Micro-Certification-Welcome to ServiceNow</button>
+    <button class="menu-btn" data-title="Menu 2 Details" data-pdf="Certifications/RPA and Scripting Certification.pdf">RPA and Scripting Certification</button>
+    <button class="menu-btn" data-title="Menu 3 Details" data-pdf="Certifications/ServiceNowCSA.pdf">ServiceNow - Certified System Administrator</button>
+    <button class="menu-btn" data-title="Menu 4 Details" data-pdf="Certifications/Xanadu Delta Certification.pdf">Xanadu Delta Certification - Certified System Administrator</button>
+    </div>
+
+    <div class="viewer">
+    <iframe id="pdfFrame" class="pdf-frame" src="Certifications/Micro-Certification-Welcome to ServiceNow.pdf"></iframe>
+    </div>
+
+    <script>
+        const buttons = document.querySelectorAll('.menu-btn');
+        const pdfFrame = document.getElementById('pdfFrame');
+
+        buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Update active button
+            buttons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            // Only update PDF
+            const pdf = button.getAttribute('data-pdf');
+            pdfFrame.src = pdf;
+    });
+    });
+    </script>
+</main>
+    <footer>
+    <p>© 2025 Hermaine Catherine Canania · All rights reserved</p>
+  </footer>
+</body>
+</html>

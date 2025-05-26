@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu PDF Viewer</title>
+  <link rel="stylesheet" href="css/webstyles.css" />
+ 
+</head>
+<body>
+
+<div class="navlinks-container" id="headernav">
+    <a href="index.html">Home</a>
+    <a href="AboutMe.html" >About Me</a>
+    <div class="dropdown">
+      <button class="dropbtn">Projects 
+      </button>
+      <div class="dropdown-content">
+        <a href="automation-anywhere.html">Data Integration Monitoring Automation</a>
+        <a href="selenium-testing.html">Enhanced Automation Framework for API and Regression Testing</a>
+        <a href="manual-testing.html">Manual Testing for SaaS Applications</a>
+      </div>
+    </div> 
+    <a href="shorts.html">Youtube Shorts</a>
+    <a href="certifications.html" >Certifications</a>
+    <a href="resume.html" class="active">Resume</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </a>
+  </div>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("headernav");
+      if (x.className === "navlinks-container") {
+        x.className += " responsive";
+      } else {
+        x.className = "navlinks-container";
+      }
+    }
+    </script>
+
+    <main class="certificationspage">
+        <iframe src="Certifications/Hermaine_CV.pdf"></iframe>
+    </main>
+    <footer>
+    <p>© 2025 Hermaine Catherine Canania · All rights reserved</p>
+  </footer>
+</body>
+</html>

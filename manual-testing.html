@@ -1,23 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Manual Testing & Test Planning</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Integration Monitoring Automation</title>
+  <link rel="stylesheet" href="css/webstyles.css" />
+
 </head>
 <body>
-  <a href="index.html">← Back to Home</a>
-  <h1>Manual Testing & Test Planning</h1>
-  <p><strong>Tools:</strong> Excel, Azure DevOps</p>
-  <p><strong>Project Type:</strong> Manual QA, Planning, Defect Management</p>
+  
+  <div class="navlinks-container" id="headernav">
+    <a href="index.html">Home</a>
+    <a href="AboutMe.html" >About Me</a>
+    <div class="dropdown">
+      <button class="dropbtn" style="background-color: #04AA6D;">Projects 
+      </button>
+      <div class="dropdown-content">
+        <a href="automation-anywhere.html">Data Integration Monitoring Automation</a>
+        <a href="selenium-testing.html">Enhanced Automation Framework for API and Regression Testing</a>
+        <a href="manual-testing.html">Manual Testing for SaaS Applications</a>
+      </div>
+    </div>
+    <a href="shorts.html">Youtube Shorts</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="resume.html">Resume</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </a>
+  </div>
 
-  <p>Created detailed test plans and test scenarios for major platform upgrades and business-critical enhancements.</p>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("headernav");
+      if (x.className === "navlinks-container") {
+        x.className += " responsive";
+      } else {
+        x.className = "navlinks-container";
+      }
+    }
+    </script>
 
-  <ul>
-    <li>Improved team coordination by providing clear test execution guides</li>
-    <li>Logged complex defects from deep negative testing scenarios</li>
-    <li>Worked closely with developers and business analysts to resolve issues and ensure user satisfaction</li>
-  </ul>
+  <main class="project-page">
+    <div class="project-detail">
+      <h1 style="font-size: 20px;">Manual Testing for SaaS Applications</h1>
+      <p><b>Role:</b> Tester<br><b>Tools Used:</b> Azure DevOps, Sharepoint, ServiceNow</p>
+    
+      <ul>
+        <li><b> Overview:</b>  Conducted end-to-end manual testing for ServiceNow applications,
+          ensuring system stability and seamless functionality. Designed and executed test
+          cases, test plans, and test scripts based on business requirements. Identified
+          defects, logged issues in Azure DevOps, and collaborated with developers for
+          resolution.</li>
+        <li> <b>Types of Testing Performed</b>
+            <ul>
+              <li> <b>Functional Testing: </b> Verified core ServiceNow functionalities and workflows.</li>
+              <li> <b>Regression Testing: </b> Ensured new updates didn't break existing features.</li>
+              <li> <b>Smoke Testing: </b> Validated stability after deployments.</li>
+              <li> <b>UI/UX Testing: </b> Assessed user interface consistency and usability.</li>
+              <li> <b>Integration Testing: </b> Checked system interactions with third-party tools.</li>
+            </ul>
+        </li>
+      </ul>
+      <p>This project ensured a high-quality ServiceNow environment, reducing downtime and enhancing user experience.</p>
+      
+      <p><br><br><br>
+        View the full template here:
+        <a href="Sample_Test_Plan.html" target="_blank" style="font-size: 17px;">
+        SAMPLE_TESTPLAN
+        </a>
+      
+      </p>
+    </div>
 
-  <p>I'm known for catching edge cases that others miss, which leads to higher product quality and better team confidence during releases.</p>
+    <div class="iframe-container">
+      <iframe src="Sample Test case_files/sheet001.htm" title="Example iFrame"></iframe>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Hermaine Catherine Canania · All rights reserved</p>
+  </footer>
+
 </body>
 </html>

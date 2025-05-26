@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YouTube Shorts Gallery</title>
+  <link rel="stylesheet" href="css/webstyles.css" />
+  <style>
+    .channelhomepage {
+      font-family: Arial, sans-serif;
+      padding: 0;
+      margin: 10px;
+      background: black;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    #video-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .video-item {
+      cursor: pointer;
+      /* Flexible width: min 150px, max 200px, grow to fill */
+      flex: 1 1 200px;
+      max-width: 200px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      background: white;
+      transition: transform 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .video-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+    .video-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 16 / 9; /* Keep thumbnails uniform ratio */
+    }
+    .video-title {
+      padding: 10px;
+      font-size: 14px;
+      color: #333;
+      text-align: center;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .channelpage {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .channelpage img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      #video-list {
+        gap: 10px;
+        margin-top: 15px;
+      }
+      .video-item {
+        flex: 1 1 45%; /* two per row on small screens */
+        max-width: none;
+      }
+      .video-title {
+        font-size: 13px;
+        padding: 8px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .video-item {
+        flex: 1 1 100%; /* one per row on very small screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navlinks-container" id="headernav">
+    <a href="index.html">Home</a>
+    <a href="AboutMe.html" >About Me</a>
+    <div class="dropdown">
+      <button class="dropbtn">Projects 
+      </button>
+      <div class="dropdown-content">
+        <a href="automation-anywhere.html">Data Integration Monitoring Automation</a>
+        <a href="selenium-testing.html">Enhanced Automation Framework for API and Regression Testing</a>
+        <a href="manual-testing.html">Manual Testing for SaaS Applications</a>
+      </div>
+    </div> 
+    <a href="shorts.html" class="active">Youtube Shorts</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="resume.html">Resume</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </a>
+  </div>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("headernav");
+      if (x.className === "navlinks-container") {
+        x.className += " responsive";
+      } else {
+        x.className = "navlinks-container";
+      }
+    }
+    </script>
+
+  <main class="channelhomepage">
+    <div class="channelpage">
+      <img src="youtubechannel.png" alt="Channel Banner" />
+    </div>
+
+    <div id="video-list"></div>
+  </main>
+
+  <script>
+    const API_KEY = 'AIzaSyBa-ipU9TyKHySM31q9yjI51wfg-RamUFU';
+    const CHANNEL_ID = 'UCsfcHffqxG0ZhsAteagaIVg';
+
+    async function fetchUploadsPlaylistId() {
+      const url = `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${CHANNEL_ID}&key=${API_KEY}`;
+      const res = await fetch(url);
+      const data = await res.json();
+      return data.items[0].contentDetails.relatedPlaylists.uploads;
+    }
+
+    async function fetchVideos(playlistId, pageToken = '') {
+      let url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&maxResults=20&key=${API_KEY}`;
+      if(pageToken) url += `&pageToken=${pageToken}`;
+      const res = await fetch(url);
+      const data = await res.json();
+      return data;
+    }
+
+    function displayVideos(videos) {
+      const videoList = document.getElementById('video-list');
+      videos.forEach(video => {
+        const videoId = video.snippet.resourceId.videoId;
+        const thumbnail = video.snippet.thumbnails.medium.url;
+        const title = video.snippet.title;
+
+        const videoItem = document.createElement('div');
+        videoItem.className = 'video-item';
+        videoItem.innerHTML = `
+          <img src="${thumbnail}" alt="${title}" />
+          <div class="video-title">${title}</div>
+        `;
+
+        videoItem.onclick = () => {
+          const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
+          window.open(videoUrl, '_blank');
+        };
+
+        videoList.appendChild(videoItem);
+      });
+    }
+
+    async function loadVideos() {
+      try {
+        const uploadsPlaylistId = await fetchUploadsPlaylistId();
+        const videosData = await fetchVideos(uploadsPlaylistId);
+        displayVideos(videosData.items);
+      } catch (error) {
+        console.error('Error fetching videos:', error);
+      }
+    }
+
+    loadVideos();
+  </script>
+
+</body>
+</html>

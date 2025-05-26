@@ -310,6 +310,57 @@ footer {
     display: block;
   }
 
+/* CSS style for certifications.html */
+  .certificationspage {
+    margin: 10px;
+    height: 100vh;
+    display: flex;
+  }
+
+  .sidebar {
+    width: 400px;
+    background: #04AA6D;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar button {
+    background: none;
+    border: none;
+    padding: 15px 20px;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    border-bottom: 1px solid #444;
+    font-family: Courier, monospace !important;
+  }
+
+  .sidebar button:hover,
+  .sidebar button.active {
+    background-color: #706a6a;
+  }
+
+  .viewer {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background: #f4f4f4;
+    height: 100vh;
+  }
+
+  .details {
+    padding: 20px;
+  }
+
+  .pdf-frame {
+    flex-grow: 1;
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
+  
 
 /* Tablet & desktop adjustments */
 @media screen and (min-width: 576px) {
@@ -446,8 +497,34 @@ footer {
     iframe {
         min-height: 400px; /* or any appropriate height for mobile */
         width: 100%;
-  }
-  }
+    }
+
+    .certificationspage {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .sidebar button {
+        flex: 1;
+        text-align: center;
+        border-right: 1px solid #444;
+        border-bottom: none;
+    }
+
+    .viewer {
+        height: 100vh;
+    }
+
+    .pdf-frame {
+        height: 100%;
+    }
+    
+    }
 
 @media (max-width: 480px) {
     .project-detail, .iframe-container {
