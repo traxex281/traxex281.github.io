@@ -333,7 +333,7 @@ public class EndtoEnd_OpportunisticRequestProcess_Normal extends CommonTest {
 			util.pause(logger, "3");
 			Thread.sleep(1000);
 			
-			//<12.10.2021><angelika.perez><[2-013] Add a validation in Work Location > Country/Location field to avoid duplication><1279649>
+			//<12.10.2021><jennie.ruby><[2-013] Add a validation in Work Location > Country/Location field to avoid duplication><1279649>
 			//user adds another work location item with the same Country/location
 			util.scrollByVisibleElement(driver, logger, portal.label(driver, "Work Locations"));
 			util.clickByJavascriptExecutor(logger, driver, btn_addWorkLocation); util.pause(logger, "30");
@@ -510,7 +510,7 @@ public class EndtoEnd_OpportunisticRequestProcess_Normal extends CommonTest {
 	}
 	
 	
-	//<12/23/2021> <[9-006A] Attachments in Requestor form are reflected in Fulfiller task form> <angelika.perez> <1279852>	
+	//<12/23/2021> <[9-006A] Attachments in Requestor form are reflected in Fulfiller task form> <jennie.ruby> <1279852>	
 	@Test
 	public void VerificationofAttachmentIcon() {
 		ExtentTest logger = extent.startTest("Verification when attachments are added to request",
@@ -683,7 +683,7 @@ public class EndtoEnd_OpportunisticRequestProcess_Normal extends CommonTest {
 			extent.flush();
 		}
 		
-		//<12/23/2021> <[9-006A] Attachments in Requestor form are reflected in Fulfiller task form> <angelika.perez> <1279852>	
+		//<12/23/2021> <[9-006A] Attachments in Requestor form are reflected in Fulfiller task form> <jennie.ruby> <1279852>	
 		@Test
 		public void VerificationofAttachedFilefromRequestForminFulfiller() {
 		ExtentTest logger = extent.startTest("Verification for attachments shown in fulfiller side",
@@ -870,7 +870,7 @@ public class EndtoEnd_OpportunisticRequestProcess_Normal extends CommonTest {
 						//user clicks Activities tab
 						util.clickByJavascriptExecutor(logger, driver, nav.tab_activities);	
 						
-						//<01/18/2022> <[[6-009] Notifications: From Optional to Auto-sent> <angelika.perez> <1367931>	
+						//<01/18/2022> <[[6-009] Notifications: From Optional to Auto-sent> <jennie.ruby> <1367931>	
 						//verify email notification to preparer is autosent
 						util.scrollByVisibleElement(driver, logger, nav.tab_activities);
 						util.clickOn(logger, nav.tab_activities); util.pause(logger, "3");
@@ -994,7 +994,7 @@ public class EndtoEnd_OpportunisticRequestProcess_Normal extends CommonTest {
 						util.clickByJavascriptExecutor(logger, driver, nav.label(driver, "Save", "")); 
 						util.pause(logger, "10");
 						
-						//<01/18/2022> <[[6-009] Notifications: From Optional to Auto-sent> <angelika.perez> <1367931>
+						//<01/18/2022> <[[6-009] Notifications: From Optional to Auto-sent> <jennie.ruby> <1367931>
 						util.clickByJavascriptExecutor(logger, driver, nav.tab_activities);
 						//verify Approved email notification to Opportunity director is autosent
 						util.clickByJavascriptExecutor(logger, driver, nav.tab_activities);
@@ -1136,7 +1136,7 @@ public class EndtoEnd_OpportunisticRequestProcess_Normal extends CommonTest {
 					util.pause(logger, "5");	
 					//user clicks Activities tab
 					util.clickByJavascriptExecutor(logger, driver, nav.tab_activities);
-					//<1.18.22><[6-009] Notifications: From Optional to Auto-sent><1367931><angelika.perez>
+					//<1.18.22><[6-009] Notifications: From Optional to Auto-sent><1367931><jennie.ruby>
 					//verify review launched email notifications to preparer and SME Reviewers are autosent
 					LoadAutosentEmailNotificationinActivities(logger, "Your case is now under review: ");
 					util.scrollByVisibleElement(driver, logger, nav.label(driver, "Your case is now under review: ", ""));
@@ -1180,7 +1180,7 @@ public class EndtoEnd_OpportunisticRequestProcess_Normal extends CommonTest {
 		}
 		
 		
-		//<1.19.22><[6-005] Notification to be sent out to resources once travel details are confirmed><1274877><angelika.perez>
+		//<1.19.22><[6-005] Notification to be sent out to resources once travel details are confirmed><1274877><jennie.ruby>
 		@Test
 		public void NotificationstoTravelerwhenReviewisApproved() {
 			ExtentTest logger  = extent.startTest("User verifies email notification to travelers", "User verifies email notification to travelers");
@@ -1514,7 +1514,7 @@ public class EndtoEnd_OpportunisticRequestProcess_Normal extends CommonTest {
 								util.clickByJavascriptExecutor(logger, driver, nav.label(driver, "Save", "")); util.pause(logger, "10");
 								util.clickByJavascriptExecutor(logger, driver, nav.tab_activities);
 								util.scrollByVisibleElement(driver, logger, driver.findElement(By.xpath("//li//span[contains(text(),'has been Approved')]")));
-								util.checkForContainsText(logger, driver.findElement(By.xpath("//li//span[contains(text(),'has been Approved')]//following::li[2]//span[2]")), Oppdirector+"@accenture.com");
+								util.checkForContainsText(logger, driver.findElement(By.xpath("//li//span[contains(text(),'has been Approved')]//following::li[2]//span[2]")), Oppdirector+"@email.com");
 								logger.log(LogStatus.PASS, "Approved email notification is sent to Opportunity Director");
 								
 								//set review to Completed and send email notification to Opportunity Director
@@ -1559,7 +1559,7 @@ public class EndtoEnd_OpportunisticRequestProcess_Normal extends CommonTest {
 								util.clickByJavascriptExecutor(logger, driver, nav.tab_reviewtasks); util.pause(logger, "5");
 								OpenP55ReviewTask(logger); util.pause(logger, "10"); util.clickByJavascriptExecutor(logger, driver, nav.tab_activities);
 								util.scrollByVisibleElement(driver, logger, driver.findElement(By.xpath("//li//span[contains(text(),'has been Completed')]")));
-								util.checkForContainsText(logger, driver.findElement(By.xpath("//li//span[contains(text(),'has been Completed')]//following::li[2]//span[2]")), Oppdirector+"@accenture.com");
+								util.checkForContainsText(logger, driver.findElement(By.xpath("//li//span[contains(text(),'has been Completed')]//following::li[2]//span[2]")), Oppdirector+"@email.com");
 								logger.log(LogStatus.PASS, "Completed email notification is sent to Opportunity Director");
 
 							}
@@ -1704,9 +1704,9 @@ public class EndtoEnd_OpportunisticRequestProcess_Normal extends CommonTest {
 								util.pause(logger, "10");
 								
 								//Verify if the email notification sent to the preparer.				
-								util.scrollByVisibleElement(driver, logger, nav.label(driver, "To: angelika.perez", ""));
-								util.checkForContainsText(logger, nav.label(driver, "To: angelika.perez", ""), "To: angelika.perez");
-								util.verifyElementByXpath(logger, nav.label(driver, "To: angelika.perez", ""));
+								util.scrollByVisibleElement(driver, logger, nav.label(driver, "To: jennie.ruby", ""));
+								util.checkForContainsText(logger, nav.label(driver, "To: jennie.ruby", ""), "To: jennie.ruby");
+								util.verifyElementByXpath(logger, nav.label(driver, "To: jennie.ruby", ""));
 								util.pause(logger, "10");
 
 								}
@@ -1828,7 +1828,7 @@ public class EndtoEnd_OpportunisticRequestProcess_Normal extends CommonTest {
 									util.clickByJavascriptExecutor(logger, driver, nav.link(driver, "Show email details", ""));
 									util.pause(logger, "10");
 									
-									util.verifyExactText(logger, driver.findElement(By.xpath("//*[@id='sn_form_inline_stream_entries']/ul/li[1]/div[3]/div/ul/li[4]/span[2]")), "a.cardone@accenture.com");
+									util.verifyExactText(logger, driver.findElement(By.xpath("//*[@id='sn_form_inline_stream_entries']/ul/li[1]/div[3]/div/ul/li[4]/span[2]")), "jennie.ruby@email.com");
 									util.pause(logger, "10");
 									
 									util.waitTillElementIsVisible(logger, driver, nav.link(driver, "Hide email details", ""));
